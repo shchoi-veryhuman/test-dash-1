@@ -27,9 +27,9 @@
                 </div>
             </div>
             <div class="nav-right">
-                <div class="status-badge offline">
+                <div class="status-badge offline" id="status-badge">
                     <div class="pulse"></div>
-                    <span>Not LIVE</span>
+                    <span id="status-text">Not LIVE</span>
                 </div>
             </div>
         </header>
@@ -41,25 +41,27 @@
             </div>
             <div class="controls-grid">
                 <div class="control-item">
-                    <label>📤 데이터 문서 업로드</label>
-                    <div class="upload-btn">
+                    <label>📊 데이터 소스</label>
+                    <div class="data-source-info upload-btn" style="cursor: default;">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" />
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
                         </svg>
-                        <span>📁 파일 선택...</span>
+                        <span id="current-data-file">데이터 불러오는 중...</span>
                     </div>
-                    <p class="help-text">PDF 문서를 업로드하면 아래 대시보드가 자동으로 업데이트됩니다.</p>
                 </div>
                 <div class="control-item">
                     <label>📅 조회 일자 선택</label>
-                    <div class="date-picker">
-                        <span>2026-02-26</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M6 9l6 6 6-6" />
-                        </svg>
+                    <div class="date-picker" style="padding: 0;">
+                        <input type="date" id="date-select"
+                            style="background: transparent; border: none; font-size: 1rem; color: inherit; font-family: inherit; font-weight: inherit; padding: 0.75rem 1.25rem; outline: none; cursor: pointer; width: 100%;"
+                            value="2026-02-27" min="2026-02-20" max="2026-02-27">
                     </div>
+                    <p class="help-text">날짜를 변경하면 해당 일자의 JSON 데이터를 불러옵니다.</p>
                 </div>
             </div>
         </section>
