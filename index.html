@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIIMstudio Daily Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="top-nav">
+            <div class="nav-left">
+                <div class="logo-wrapper">
+                    <span class="logo-icon">📊</span>
+                    <div>
+                        <h1>VIIMstudio</h1>
+                        <p class="subtitle">Daily Dashboard • 운영 현황 및 데이터</p>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="status-badge offline">
+                    <div class="pulse"></div>
+                    <span>Not LIVE</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Control Panel -->
+        <section class="control-panel glass-card">
+            <div class="panel-header">
+                <h2>대시보드 컨트롤 패널</h2>
+            </div>
+            <div class="controls-grid">
+                <div class="control-item">
+                    <label>📤 데이터 문서 업로드</label>
+                    <div class="upload-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" />
+                        </svg>
+                        <span>📁 파일 선택...</span>
+                    </div>
+                    <p class="help-text">PDF 문서를 업로드하면 아래 대시보드가 자동으로 업데이트됩니다.</p>
+                </div>
+                <div class="control-item">
+                    <label>📅 조회 일자 선택</label>
+                    <div class="date-picker">
+                        <span>2026-02-26</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="dashboard-grid">
+
+            <!-- 👤 가입과 로그인 -->
+            <section class="glass-card stat-card">
+                <div class="card-header">
+                    <h2><span class="emoji">👤</span> 가입과 로그인</h2>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>구분</th>
+                                <th>1일</th>
+                                <th>1주</th>
+                                <th>4주</th>
+                                <th>누적(전체)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="row-label">가입</td>
+                                <td class="highlight-val">3</td>
+                                <td>25</td>
+                                <td>76</td>
+                                <td>2,682</td>
+                            </tr>
+                            <tr>
+                                <td class="row-label">로그인</td>
+                                <td class="highlight-val">0</td>
+                                <td>43</td>
+                                <td>130</td>
+                                <td>2,713</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ✨ AI 콘텐츠 생성 -->
+            <section class="glass-card stat-card featured">
+                <div class="card-header">
+                    <h2><span class="emoji">✨</span> AI 콘텐츠 생성</h2>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>구분</th>
+                                <th>1일</th>
+                                <th>1주</th>
+                                <th>4주</th>
+                                <th>누적(전체)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="row-label">이용자수(명)</td>
+                                <td class="highlight-val color-blue">10</td>
+                                <td>39</td>
+                                <td>84</td>
+                                <td>1,961</td>
+                            </tr>
+                            <tr>
+                                <td class="row-label">생성건수(건)</td>
+                                <td class="highlight-val color-blue">128</td>
+                                <td>365</td>
+                                <td>1,210</td>
+                                <td>121,922</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="alert-box warning mt-4">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01" />
+                    </svg>
+                    <span>※ 1일 생성 건수 중 오류 1건 발생</span>
+                </div>
+            </section>
+
+            <!-- 📋 작업 별 생성건수 -->
+            <section class="glass-card stat-card span-full">
+                <div class="card-header">
+                    <h2><span class="emoji">📋</span> 작업 별 생성건수</h2>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>구분</th>
+                                <th>1일</th>
+                                <th>1주</th>
+                                <th>4주</th>
+                                <th>누적(전체)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="row-label">T2I</td>
+                                <td class="highlight-val">49</td>
+                                <td>0</td>
+                                <td>71</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td class="row-label">I2I</td>
+                                <td class="highlight-val">0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="row-label">Styling Booth</td>
+                                <td class="highlight-val">71</td>
+                                <td>0</td>
+                                <td>71</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td class="row-label">BG Changer</td>
+                                <td class="highlight-val">6</td>
+                                <td>0</td>
+                                <td>6</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td class="row-label">Face swap</td>
+                                <td class="highlight-val">2</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="row-label">Video</td>
+                                <td class="highlight-val">0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 🪙 단건구매 (Credit) -->
+            <section class="glass-card stat-card">
+                <div class="card-header">
+                    <h2><span class="emoji">🪙</span> 단건구매 (Credit)</h2>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>구분</th>
+                                <th>1일</th>
+                                <th>1주</th>
+                                <th>4주</th>
+                                <th>누적(전체)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="row-label credit-375">375 Credit</td>
+                                <td class="highlight-val">0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td class="row-label credit-750">750 Credit</td>
+                                <td class="highlight-val">0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td class="row-label credit-1250">1250 Credit</td>
+                                <td class="highlight-val">0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>11</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <div class="subs-container span-full">
+                <!-- 📅 구독가입 -->
+                <section class="glass-card stat-card sub-card">
+                    <div class="card-header">
+                        <h2><span class="emoji">📅</span> 구독가입</h2>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>1일</th>
+                                    <th>1주</th>
+                                    <th>4주</th>
+                                    <th>누적(전체)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="row-label sub-basic">Basic</td>
+                                    <td class="highlight-val text-green">0</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td class="row-label sub-pro">Pro</td>
+                                    <td class="highlight-val text-green">0</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>79</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- 🚫 구독 취소 -->
+                <section class="glass-card stat-card sub-card">
+                    <div class="card-header">
+                        <h2><span class="emoji">🚫</span> 구독 취소</h2>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>1일</th>
+                                    <th>1주</th>
+                                    <th>4주</th>
+                                    <th>누적(전체)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="row-label sub-basic">Basic</td>
+                                    <td class="highlight-val text-red">0</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td class="row-label sub-pro">Pro</td>
+                                    <td class="highlight-val text-red">0</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>79</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+        <!-- Footer / Notes -->
+        <footer class="glass-card footer-notes">
+            <div class="notes-header">
+                <h3>💡 데이터 참고 사항</h3>
+            </div>
+            <ul>
+                <li>각 집계는 <code>(1일 / 1주 / 4주 / 전체)</code> 순서의 데이터를 기반으로 작성되었습니다.</li>
+                <li><strong>작업 별 생성건수</strong>는 대시보드 UI 레이아웃에 맞게 당일(1일) 발생 건수를 시각화한 수치입니다.</li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
